@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Song Emotion Recommender — Mockup</title>
+
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+  <main class="container" role="main">
+    <header class="header">
+      <h1 class="title">Song Emotion Recommender</h1>
+      <p class="subtitle">Type how you feel and let the AI pick tracks to match your mood.</p>
+    </header>
+
+    <section class="mood-box" aria-label="Mood input">
+      <div class="input-wrap">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="opacity:.9"><path d="M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10C22 6.48 17.52 2 12 2z" stroke="rgba(255,255,255,0.7)" stroke-width="0.8" fill="rgba(255,255,255,0.02)"></path></svg>
+        <input id="moodInput" type="text" placeholder="I'm feeling..." aria-label="Describe your mood" />
+      </div>
+      <button id="detectBtn" class="detect-btn">Detect Emotion</button>
+    </section>
+
+    <div class="ai-status" id="status"></div>
+
+    <section class="results" aria-live="polite">
+      <h2 class="results-title" id="resultsTitle" style="display:none">Recommended for <span id="moodLabel"></span></h2>
+      <div class="song-list" id="songList">
+        <!-- JS will populate cards here -->
+      </div>
+    </section>
+
+  </main>
+
+ <script src="script.js"></script>
+</body>
+</html>
