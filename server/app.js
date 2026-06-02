@@ -5,15 +5,6 @@ import axios from "axios";
 import dotenv from "dotenv";
 import { InferenceClient } from "@huggingface/inference";
 
-const client = new InferenceClient(process.env.HF_TOKEN);
-
-const output = await client.textClassification({
-	model: "j-hartmann/emotion-english-distilroberta-base",
-	inputs: "I like you. I love you",
-	provider: "hf-inference",
-});
-
-console.log(output);
 dotenv.config();
 
 const app = express();
